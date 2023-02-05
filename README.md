@@ -22,3 +22,5 @@ However, if inspect the two db after the program exit, we'll see that **db2 only
 (It's clear that exactly 5 records are inserted in function `insert_stuff`, and I apply the same function to both sqlite pool)
 
 Also made sure the two db pool are closed properly.
+
+![image](https://user-images.githubusercontent.com/3937480/216809053-81b6456a-d305-4df6-8afe-7a84c4b1b8e0.png)
