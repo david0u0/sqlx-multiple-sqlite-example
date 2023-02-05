@@ -1,6 +1,6 @@
 set -e
 
-(set -x; cargo run $@)
+(set -x; DATABASE_URL=sqlite:schema.db cargo run $@)
 echo
 
 echo "inspect db1: should have 5 records"
