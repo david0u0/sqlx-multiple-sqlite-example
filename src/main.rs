@@ -37,4 +37,7 @@ async fn main() {
 
     pool1.close().await;
     pool2.close().await;
+
+    // Uncomment the following line and everything's fine
+    // tokio::time::sleep(tokio::time::Duration::from_millis(100)).await;
 }

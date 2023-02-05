@@ -2,7 +2,7 @@ Run the script `./run.sh` (or `./run.sh --release` for release build) in bash. Y
 
 ```
 + cargo run --release
-Finished dev [unoptimized + debuginfo] target(s) in 0.05s
+     Finished dev [unoptimized + debuginfo] target(s) in 0.05s
      Running `target/debug/sqlx-join`
 
 inspect db1: should have 5 records
@@ -22,5 +22,9 @@ However, if inspect the two db after the program exit, we'll see that **db2 only
 (It's clear that exactly 5 records are inserted in function `insert_stuff`, and I apply the same function to both sqlite pool)
 
 Also made sure the two db pool are closed properly.
+
+
+## Some clue?
+If I sleep 100ms after closing db and before exiting the program, the problem disappear.
 
 ![image](https://user-images.githubusercontent.com/3937480/216809053-81b6456a-d305-4df6-8afe-7a84c4b1b8e0.png)
