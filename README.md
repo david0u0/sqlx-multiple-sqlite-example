@@ -27,4 +27,6 @@ Also made sure the two db pool are closed properly.
 ## Some clue?
 If I sleep 100ms after closing db and before exiting the program, the problem disappear.
 
+More over, if I add the sleep, I don't need to close the db and both db will have 5 records. So the close db doesn't seem to affect the outcome in this case.
+
 ![image](https://user-images.githubusercontent.com/3937480/216809053-81b6456a-d305-4df6-8afe-7a84c4b1b8e0.png)
