@@ -1,5 +1,9 @@
 set -e
 
+SCHEMA=schema.db
+rm $SCHEMA -f
+cat schema.sql | sqlite3 $SCHEMA
+
 (set -x; DATABASE_URL=sqlite:schema.db cargo run $@)
 echo
 
